@@ -1,14 +1,63 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru"> <!-- язык страницы -->
+
   <head>
-    <meta charset="UTF-8" />
+
+    <meta charset="UTF-8" /> <!-- кодировка страницы -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- метатег "viewport" с значениями content=""> определяет поведение страницы в зависимости от размера дисплея 
+     width=device-width означает что видимая пользователю часть занимает всю ширину экрана
+     initial-scale=1 запрещает странице увеличиваться или уменьшаться при загрузке -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- метатег description важен для поисковиков, поскольку отражает описание сайта -->
+    <meta name="description" content="Страница про то, что делать, когда не можешь делать ничего
+    или почему нам так сложно сконцентрироваться"> 
+
+    <!-- метатег для того, чтобы браузер понял, что у нашего сайта есть тёмная и светлая темы -->
+    <meta name="color-scheme" content="dark light"> 
+
+    <!-- название сайта, отображается во вкладке браузера -->
     <title>Сложно сосредоточиться</title>
+
+      <!-- весит 4,18 килобайт (4 280,32 байт), 
+    стандартный фавикон в Формате ICO,  размером 32×32 пикселя, для поддержки всех браузеров 
+    (т.е. используется как фолбэк для старых браузеров), 
+    а атрибут sizes="any" чинит неправильное поведение некоторых браузеров, 
+    когда они выбирают ICO-файл вместо SVG... -->
+    <link rel="icon" href="./images/favicon.ico" sizes="any">
+    
+    <!-- svg весит меньше - 707 байт, 
+    подключаем векторный фавикон в формате SVG, это самый предпочтительный формат, т.к. 
+    его можно адаптировать под разные размеры без потери качества. -->
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+    
+     <!-- растровое изображение в формате png с размером 180×180 пикселей,
+      используем на случай, если пользователь захочет добавить сайт в виде иконки на смартфоне или планшете, 
+     выбрав пункт «Добавить на экран Домой» -->
+    <link rel="apple-touch-icon" href="./images/mobile-icon.png">
+   
+    <link rel="stylesheet" href="./styles/globals.css">
+    <link rel="stylesheet" href="./fonts/fonts.css">
+
+    <link rel="stylesheet" href="./styles/variables.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/dark.css">
+    <link rel="stylesheet" href="./styles/light.css">
+
     <script src="./scripts/script.js"></script>
+
   </head>
+
+
+
   <body class="page">
+
     <header class="header decorated-zone">
+
+      <span class="decor-elements__REC" aria-hidden="true">rec</span>
+      
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
@@ -35,6 +84,32 @@
           </li>
         </ul>
       </nav>
+
+
+
+<h1 class="header__title"> 
+<span class="">no</span> 
+<span class="">focus</span> 
+</h1>
+
+
+     <p class="header__article-about accent-marker-text">Что делать, когда не можешь <br> делать ничего <br>
+Или почему нам так сложно сконцентрироваться, особенно <br> когда очень надо</p> 
+ <!-- <p class="header__article-about accent-marker-text">
+  Что делать, когда не можешь делать ничего Или почему нам так сложно
+        сконцентрироваться, особенно когда очень надо
+</p> -->
     </header>
+
+<main>
+      <section></section>
+      <section></section>
+      <section></section>
+      <section></section>
+    </main>
+    <footer></footer>
+
+
+
   </body>
 </html>

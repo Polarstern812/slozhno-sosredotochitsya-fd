@@ -1,5 +1,207 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+/* Основные стили проекта. Это стили для темы, которую верстаем первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  /* сохраните в разметке и стилях класс page у тега body. 
+  Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+
+ writing-mode: horizontal-tb;
+
+ min-width: 375px;
+ min-height: 6770px; 
+
+ background-image: var(--background-image-theme-dark, url(../images/cover-image-dark.png));
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center; /*расположение фона по вертикали и горизонтали, в даном случае размещаем по центру*/
+ background-attachment: fixed; /*чтобы фон оставался на месте при прокрутке страницы*/
+ background-color: var(--dark-color), #000028; /*фоновый цвет*/
+
+ font-family: var(--font-family, "IBM Plex Mono");
+ font-size: var(--font-size, 18px);
+ font-weight: var(--font-weight-regular, 400);
+ letter-spacing: var(--letter-spacing, 0%);
+
+color: var(--dark-theme-color, #F1B2CE);
+}
+
+.header {
+min-inline-size: 375px;
+height: 100vh; /* 100% от высоты окна браузера */ 
+min-block-size: 668px; /*фиксируем минимальную высоту блока согласно значению из макета*/
+
+background-image: url("../images/cover-image.png"); 
+
+display: grid;
+grid-template-rows: 1fr 1fr 1fr;
+/*grid-template-rows: 1fr min-content 1fr;*/
+
+position: relative;
+
+padding-inline: 10px;
+/*padding-inline-start: 10px;
+padding-inline-end: 10px;*/
+padding-block-end: 66px;
+
+}
+
+
+/*
+В правом верхнем и нижнем левом углах есть декоративные уголки. 
+Их лучше реализовать при помощи псевдоэлементов и указания границ для двух сторон. 
+Поскольку уголки будут использоваться и в шапке, и в подвале страницы, 
+то стили для них следует описать в общем классе. 
+Уголки нужно спозиционировать абсолютно относительно родительского блока.
+*/
+.decorated-zone {
+position: relative;
+
+
+}
+
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+
+  display: block;
+  block-size: 25px;
+  inline-size: 25px;
+  top: 10px; 
+  right: 10px;
+
+  border-block-start: 1px solid var(--accent-color, #ff0070);
+  border-inline-end: 1px solid var(--accent-color, #ff0070);
+}
+
+.decorated-zone::after {
+content: "";
+position: absolute;
+
+display: block;
+block-size: 25px;
+inline-size: 25px;
+left: 10px;
+bottom: 10px;
+
+border-block-end: 1px solid var(--dark-theme-accent-color, #FF0070);
+border-inline-start: 1px solid var(--dark-theme-accent-color, #FF0070);
+}
+
+
+.decor-elements__REC {
+/*указываем координаты для абсолютного позиционирования*/
+display: flex; /*для корректного позиционирования псевдо-элемента*/
+flex-direction: row;
+
+position: absolute;
+top: 10px;
+left: 304px;
+
+text-transform: uppercase;
+line-height: 25px;
+color: var(--dark-theme-accent-color, #FF0070);
+
+
+/* прописать позиционирование */
+}
+
+/*Точку справа от надписи реализуйте через псевдоэлемент, 
+чтобы не создавать лишние пустые элементы в HTML-разметке.*/
+.decor-elements__REC::after {
+content: "";
+position: relative;
+top: 8px;
+right: -8px;
+
+background-color: var(--dark-theme-accent-color, #FF0070); /*вместо color, кот. для текста*/
+display: block; /*т.к. точка не текст*/
+inline-size: 9px;
+block-size: 9px;
+border-radius: 50%;
+
+box-shadow: 0px 0px 4px 2px var(--dark-theme-accent-color, #FF0070);
+}
+
+
+
+
+
+
+
+/* прописать позиционирование, а также состояния hover focus */
+.header__theme-menu {
+  grid-row: 1;
+  justify-self: end;
+  /*align-self: center;*/
+
+  padding-block-start: 72px; /*39*/
+ 
+}
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  
+}
+.header__theme-menu-item {
+line-height: 18px;
+color: var(--accent-color);
+}
+.header__theme-menu-button {
+  width: 70px;
+  height: 26px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  text-transform: lowercase;
+  text-align: center;
+
+  color: var(--dark-theme-accent-color);
+}
+
+
+/*???*/
+.header__theme-menu-button:hover {
+border: 1px solid #FF007066, 60%; 
+/*outline: 1px solid #FF0070, 60%;*/
+}
+/*???*/
+.header__theme-menu-button:focus {
+text-decoration: underline 1px solid #FF0070;
+}
+
+
+.header__title {
+grid-row: 2;
+justify-self: start;
+
+/*font-size: 116px;*/
+font-size: var(--title-clamp-small);
+font-weight: var(--font-weight-bold);
+line-height: 83%;
+color: var(--dark-theme-title-color);
+text-shadow: 4px 4px 0px var(--dark-theme-accent-color);
+
+margin-block-start: 65px;
+}
+
+.header__article-about { /*subtitle*/
+grid-row: 3;
+/*align-self: center; /*Выравнивает элемент внутри ячейки по вертикали*/
+
+
+}
+
+.accent-marker-text { /*title-decor*/
+line-height: 23.4px;
+font-weight: var(--font-weight-bold);
+
+color: var(--dark-color);
+background-color: var(--dark-theme-accent-color);
+
+margin-block-start: 55px;
+/*margin-block-end: 33px; /*56*/
 }
