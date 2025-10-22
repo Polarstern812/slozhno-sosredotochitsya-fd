@@ -12,13 +12,9 @@
   --dark-theme-color: #F1B2CE;
   --dark-theme-title-color: #DB00FF;
   --dark-theme-accent-color: #FF0070;
+  --dark-theme-hover-effect-color: #FF007066;
 
 
-  --background-image-theme-light: url("./images/cover-image-light"); 
-  --light-color: #FFF1F7; /*фоновый цвет, который совпадает с основным тоном фонового изображения страницы*/
-  --light-theme-color: #353430;
-  --light-theme-title-color: #FFC2E6;
-  --light-theme-accent-color: #FF8DCB;
 
 
   --font-family: "IBM Plex Mono", monospace;
