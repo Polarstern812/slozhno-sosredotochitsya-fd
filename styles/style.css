@@ -79,8 +79,8 @@ border-inline-end: 1px solid var(--dark-theme-accent-color, #FF0070);
 }
 
 .decorated-zone::after {
-/* justify-self: start;
-align-self: flex-end; */
+/*justify-self: start;
+align-self: flex-end;*/ 
 
 left: 10px;
 bottom: 10px;
@@ -130,7 +130,6 @@ box-shadow: 0px 0px 4px 2px var(--dark-theme-accent-color, #FF0070);
 .header__theme-menu {
   grid-row: 1;
   justify-self: end;
-  /*align-self: center;*/
 
   padding-block-start: 65px; 
 }
@@ -220,7 +219,6 @@ background-color: var(--dark-theme-accent-color, #FF0070);
 
 .main {
 min-inline-size: 375px;
-/*min-height: 5355px;*/
 min-block-size: 5355px;
 
 display: flex;
@@ -228,6 +226,7 @@ flex-direction: column;
 
 padding-inline-start: 10px;
 padding-inline-end: 10px;
+
 padding-block-end: 40px;
 }
 
@@ -237,16 +236,7 @@ padding-block-start: 40px;
 padding-block-end: 30px; /*50*/
 }
 
-/*
-.section-one__multitasking {
-padding-block-end: 20px;
-}
-*/
-/*
-.section-one__dofamin {
-padding-block-end: 50px;
-}
-*/
+
 
 .section__title {
 font-size: var(--font-size, 18px); /* не понятно, почему не наследуется от пейджа или от мейна хотя бы ??? */
@@ -270,8 +260,8 @@ padding-block-end: 20px;
 .gadgets {}*/
 
 .article-title {
-min-block-size: 23px;
-min-inline-size: 355px;
+/*min-block-size: 23px;
+min-inline-size: 355px;*/
 
 font-size: var(--font-size, 18px); /* не понятно, почему не наследуется от пейджа или от мейна хотя бы ??? */
 font-weight: var(--font-weight-bold, 700);
@@ -279,6 +269,7 @@ line-height: 23.4px;
 }
 
 .main-text {
+font-weight: var(--font-weight-regular, 400);
 line-height: 23.4px;
 color: var(--dark-theme-color, #F1B2CE);
 
@@ -289,18 +280,29 @@ padding-block-end: 20px;
 
 /*стилизуем ССЫЛКУ!!!*/
 .section__article-text-link {
+text-decoration: none;
+}
+.text-link-decor {
+/*box-shadow: [horizontal offset] [vertical offset] [blur radius] [color];*/
 text-shadow: 2px 1px 0px var(--dark-theme-accent-color, #FF0070);
-text-decoration: none; 
 }
 
+/*при наведении курсора на элемент*/
 .section__article-text-link:hover {
-text-decoration: underline 1px solid var(--dark-theme-color, #F1B2CE);
+border-bottom:  1px solid var(--dark-theme-color, #F1B2CE);
+/*padding-bottom: 1px;*/
+/*box-shadow: none;*/
+box-shadow: none;
 }
 
+/*при клике на элемент или переходе на него с клавиатуры при помощи клавиши tab*/
 .section__article-text-link:focus {
 border: 1px solid var(--dark-theme-color, #F1B2CE);
 }
 
+/*:focus-visible возникает исключительно при фокусе с клавиатуры*/
+/*:active при удержании кнопки мыши на элементе; чЧасто используется для создания эффекта «нажатия» на кнопку или ссылку*/
+/*:link — :visited — :focus — :hover — :active*/
 
 .main__section-two__What-reduces-concentration-of-attention {
 padding-block-end: 30px;
@@ -315,7 +317,7 @@ padding-block-end: 30px;
 */
 
 
-.main__section-three {
+.main__section-three__How-to-concentrate-better-than-a-goldfish {
 padding-block-end: 30px;
 }
 
@@ -324,7 +326,7 @@ padding-block-end: 30px;
 */
 
 .article-title__simple-tips {
-min-block-size: 47px;
+/*min-block-size: 47px;*/
 /*min-inline-size: 355px;*/
 
 font-size: var(--font-size, 18px); /* не понятно, почему не наследуется от пейджа или от мейна хотя бы ??? */
@@ -352,19 +354,19 @@ line-height: 23.4px;
 .go-read {}
 */
 
-/*
-.main__section-four__gallery {
-}
-*/
 
-/*gallery-title*/
-.possible-in-pictures {
+/*.main__section-four__gallery {
+    display: grid;
+  gap: 10px;
+}*/
+
+/*gallery-title*/ 
+.article-title__possible-in-pictures {
 margin-block-end: 10px;
 }
 
-
 .gallery {
-display: flex; /*для корректного позиционирования псевдо-элемента*/
+display: flex; 
 flex-direction: column;
 gap: 10px;
 }
@@ -412,25 +414,454 @@ text-shadow: 2px 2px 0px var(--dark-theme-accent-color, #FF0070);
 }
 .header {
 min-block-size: 1024px; /*фиксируем минимальную высоту блока согласно значению из макета*/
-/*grid-template-rows: 1fr min-content 1fr;*/ 
+
+display: grid;
+grid-template-rows: 1fr 1fr 1fr;
+grid-template-columns: 1fr 1fr;
+
 padding: 20px;
 padding-block-end: 183px;
+}
 
+.decorated-zone::before {
+top: 20px; 
+right: 20px;
+}
+.decorated-zone::after {
+left: 20px;
+bottom: 20px;
+}
+.decor-elements__REC {
+top: 20px;
+left: 687px;
+}
+
+.header__theme-menu {
+  grid-row: 1 / -3;
+  grid-column: 2 / 3;
+  justify-self: end;
+
+  padding-block-start: 172px; 
+  padding-block-end: 173px;
+}
 
 .header__title {
-justify-self: flex-start;
+/*font-size: 120px;*/
+justify-self: flex-start; /*Выравнивает элемент внутри ячейки по горизонтали*/
+align-self: flex-start; /*Выравнивает элемент внутри ячейки по вертикали*/
 
+grid-row: 2 / -2;
+grid-column: 1 / 3;
+
+margin-block-start: 0px;
+margin-inline-start: -20px;
+}
+
+.header__article-about { /*subtitle*/
+grid-row: 3 / -1;
+grid-column: 2 / -2;
+
+margin-block-start: 162px; 
+}
+
+
+
+.main {
+min-inline-size: 768px;
+min-block-size: 3682px;
+
+padding-inline-start: 20px;
+padding-inline-end: 20px;
+
+padding-block-end: 60px; /*!!!*/
+}
+
+
+
+.main__section-one__Why-it-is-so-hard-to-concentrate {
+padding-block-start: 60px;
+padding-block-end: 60px; /*80*/
+
+display: grid;
+grid-template-rows: 1fr 1fr;
+/*grid-template-columns: 35,16% 64,84%;*/
+/*grid-template-columns: min-content 1fr;*/
+grid-template-columns: 35% 65%;
+/*column-gap: 20px;*/
+grid-template-areas: "title__Why-it-is-so-hard-to-concentrate section-one__multitasking"
+"title__Why-it-is-so-hard-to-concentrate section-one__dofamin";
+/*row-gap: 20px;*/
+}
+
+.title__Why-it-is-so-hard-to-concentrate {
+grid-area: title__Why-it-is-so-hard-to-concentrate;
+padding-inline-end: 20px;
+}
+
+.section-one__multitasking {
+grid-area: section-one__multitasking;
+/*padding-block-end: 20px;*/
+}
+
+/*.multitasking-one, .dofamin {}*/
+
+.section-one__dofamin {
+grid-area: section-one__dofamin;
+/*padding-block-end: 50px;*/
+}
+
+
+
+.main__section-two__What-reduces-concentration-of-attention {
+min-block-size: 675px;
+
+display: flex;
+flex-direction: column;
+
+padding-block-end: 60px; /*80*/
+}
+
+.title__What-reduces-concentration-of-attention {
+inline-size: 236px;
+block-size: 70px;
+
+margin-block-end: 20px;
+/*justify-content: start;*/
+/*display: block;*/
+}
+
+
+/*
+.section-two__multitasking {}
+.section-two__food {}
+.section-two__gadgets {}
+*/
+
+/*.multitasking-two-text,
+.food-text,
+.gadgets-text {
+padding-block-end: 0px;*/
+/*margin: 0px;*/
+
+
+.main__section-three__How-to-concentrate-better-than-a-goldfish {
+padding-block-end: 60px; /*80*/
+
+display: grid;
+/*grid-template-columns: min-content 1fr;*/
+grid-template-columns: 35% 65%;
+grid-template-rows: 1fr;
+/*column-gap: 20px;*/
+/*row-gap: 20px;*/
+
+grid-template-areas: "title__better-than-goldfish article-title__simple-tips"
+"title__better-than-goldfish section-three-item__sky-and-clouds"
+"title__better-than-goldfish section-three-item__turn-on-the-music"
+"title__better-than-goldfish section-three-item__go-for-a-walk"
+"title__better-than-goldfish section-three-item__eat-well"
+"title__better-than-goldfish section-three-item__go-read";
+}
+
+.title__better-than-goldfish {
+grid-area: title__better-than-goldfish;
+}
+.article-title__simple-tips {
+grid-area: article-title__simple-tips;
+}
+.section-three-item__sky-and-clouds {
+grid-area: section-three-item__sky-and-clouds;
+}
+.section-three-item__turn-on-the-music {
+grid-area: section-three-item__turn-on-the-music;
+}
+.section-three-item__go-for-a-walk {
+grid-area: section-three-item__go-for-a-walk;
+}
+.section-three-item__eat-well {
+grid-area: section-three-item__eat-well;
+}
+.section-three-item__go-read {
+grid-area: section-three-item__go-read;
+}
+
+
+
+.main__section-four__gallery {
+min-inline-size: 768px;
+min-block-size: 823px;
+
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.article-title__possible-in-pictures {
+margin-block-end: 0px;
+/*margin-block-end: 20px;*/
+}
+
+.gallery {
+max-inline-size: 728px;
+min-block-size: 780px;
+
+display: grid;
+grid-template-columns: 31% 32% 31%;
+grid-template-rows: 25% 29% 41%;
+
+gap: 20px;
+
+/*grid-template-areas: "gallery-item__sunset gallery-item__sunset gallery-item__ice-cream"
+"gallery-item__tape gallery-item__books gallery-item__ice-cream"
+"gallery-item__tape gallery-item__street gallery-item__street";
+}*/
+}
+
+.gallery-item__sunset {
+
+grid-column: 1 / 3;
+grid-row: 1 / 2;
+}
+
+.gallery-item__ice-cream {
+
+grid-column: 3 / 4;
+grid-row: 1 / 3;
+}
+
+.gallery-item__tape {
+
+grid-column: 1 / 2;
+grid-row: 2 / 4;
+}
+
+.gallery-item__books {
+
+grid-column: 2 / 3;
+grid-row: 2 / 3;
+}
+
+.gallery-item__street {
+
+grid-column: 2 / 4;
+grid-row: -2 / -1;
+}
+
+
+
+.gallery-item__sunset,
+.gallery-item__ice-cream,
+.gallery-item__tape,
+.gallery-item__books,
+.gallery-item__street {
+
+inline-size: 100%;
+block-size: 100%;
+
+object-fit: cover;
+object-position: center;
+}
+ 
+/*.image-sunset,
+.image-ice-cream,
+.image-tape,
+.image-books,
+.image-street
+ {
+inline-size: 100%;
+block-size: 100%;
+}*/
+
+
+
+.footer {
+
+min-block-size: 1024px; /*фиксируем минимальную высоту блока согласно значению из макета*/
+
+grid-template-rows: 1fr 1fr 1fr;
+
+align-items: center;
+justify-content: center;
+
+padding: 20px;
+}
+
+.footer-title {
+/*font-size: 120px;*/ 
+font-size: var(--title-clamp-large);
+}
+
+
+
+.decorated-zone::before {
+top: 20px; 
+right: 20px;
+}
+
+.decorated-zone::after {
+left: 20px;
+bottom: 20px;
 }
 }
-
-
 
 
 
 /* Стили для экранов шире 1024 пикселей */
-@media screen and (min-inline-size: 1024px) {
-    
+ @media (width >= 1024px) {
+.page {
+ min-inline-size: 1024px;
+ min-block-size: 5008px; 
+}
+
+.header {
+min-block-size: 768px; /*фиксируем минимальную высоту блока согласно значению из макета*/
+
+grid-template-rows: 41% 18% 41%;
+grid-template-columns: 33% 17% 17% 33%;
+
+/*padding: 20px;*/
+
+padding-block-end: 134px;
+}
+
+.decor-elements__REC {
+top: 20px;
+left: 943px;
+}
+
+.header__theme-menu {
+grid-row: 1 / 2;
+grid-column: 2 / 4;
+/*grid-row: 1;*/
+
+justify-self: center;
+align-self: start;
+/*place-content: center;*/
+
+padding-block-start: 0px; 
+padding-block-end: 702px;
+}
+.header__theme-menu-list {
+/*margin-block-end: 273px;*/
+flex-direction: row;
+}
+
+.header__title {
+/*font-size: 157px;*/
+font-size: var(--title-clamp-large);
+
+grid-row: 2 / 4;
+grid-column: 1 / -1;
+/*justify-self: start;*/
+/*align-self: center;*/
+
+/*margin-block-start: 0px;*/
+margin-block-start: 45px;
+margin-inline-start: -20px;
+}
+
+.header__article-about { /*subtitle*/
+grid-row: 3 / 4;
+grid-column: -3 / -1;
+
+align-self: flex-end;
+/*margin-block-start: 114px;
+margin-block-end: 114px;*/
+/*position: absolute;
+top: 50%;
+transform: translateY(-50%); /* Центровка элемента по вертикали */
+}
 
 
 
+.main {
+min-inline-size: 1024px;
+min-block-size: 3352px;
+}
+
+.main__section-one__Why-it-is-so-hard-to-concentrate {
+grid-template-columns: 34% 66%;
+}
+
+.main__section-two__What-reduces-concentration-of-attention {
+min-block-size: 498px;
+min-inline-size: 984px;
+
+display: grid;
+grid-template-columns: repeat(3, 32%);
+/*grid-template-columns: repeat(3, 33%);*/
+grid-template-rows: 13% 87%;
+grid-auto-flow: row;
+column-gap: 20px;
+
+grid-template-areas: "title__What-reduces-concentration-of-attention title__What-reduces-concentration-of-attention title__What-reduces-concentration-of-attention"
+"section-two__multitasking section-two__food section-two__gadgets";
+}
+.title__What-reduces-concentration-of-attention {
+inline-size: 315px;
+block-size: 47px;
+}
+.section-two__multitasking {
+grid-area: section-two__multitasking;
+}
+.section-two__food {
+grid-area: section-two__food;
+}
+.section-two__gadgets {
+grid-area: section-two__gadgets;
+}
+.section-two__multitasking,
+.section-two__food,
+.section-two__gadgets {
+display: block;
+min-inline-size: 315px;
+/*margin-inline-end: 20px;*/
+}
+.article-title__section-two__multitasking,
+.article-title__section-two__food,
+.article-title__section-two__gadgets {
+/*margin-inline-end: 20px;*/
+min-inline-size: 315px;
+min-block-size: 23px;
+}
+
+.main__section-three__How-to-concentrate-better-than-a-goldfish {
+padding-block-end: 60px; /*80*/
+grid-template-columns: 32% 66%;
+column-gap: 20px;
+/*row-gap: 20px;*/
+}
+.title__better-than-goldfish {
+min-inline-size: 315px;
+min-block-size: 98px;
+}
+
+.main__section-four__gallery {
+min-inline-size: 1024px;
+min-block-size: 1091px;
+
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+.article-title__possible-in-pictures {
+margin-block-end: 0px;
+}
+.gallery {
+min-inline-size: 984px;
+min-block-size: 1048px;
+
+grid-template-columns:  repeat(3, 32%);
+grid-template-rows: 25% 30% 41%;
+}
+
+
+
+.footer {
+min-inline-size: 1024px; /*фиксируем минимальную высоту блока согласно значению из макета*/
+min-block-size: 768px;
+}
+.footer-title {
+align-items: center;
+justify-content: center;
+}
 }
