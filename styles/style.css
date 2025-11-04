@@ -19,9 +19,11 @@
  font-family: var(--font-family, "IBM Plex Mono");
  font-size: var(--font-size, 18px);
  font-weight: var(--font-weight-regular, 400);
- letter-spacing: var(--letter-spacing, 0%);
+ /*letter-spacing: var(--letter-spacing, 0%);*/
 
  color: var(--dark-theme-color, #F1B2CE);
+
+ overflow-x: hidden;
 }
 
 .header {

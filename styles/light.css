@@ -85,9 +85,11 @@ background-color: var(--light-theme-accent-color, #FF8DCB);
 .section__title {
 color: var(--light-theme-color, #353430);
 }
+
 .main-text {
 color: var(--light-theme-color, #353430);
 }
+
 .section__article-text-link {
 text-shadow: 2px 1px 0px var(--light-theme-accent-color, #FF8DCB);
 text-decoration: none; 
