@@ -3,7 +3,15 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-/*@media (prefers-color-scheme: dark) {}*/
+@media (prefers-color-scheme: dark) {
+   :root {
+  --background-image-theme-dark: url("../images/cover-image-dark.png"); 
+  --dark-color: #000028; /*фоновый цвет, который совпадает с основным тоном фонового изображения страницы*/
+  --dark-theme-color: #F1B2CE;
+  --dark-theme-title-color: #DB00FF;
+  --dark-theme-accent-color: #FF0070;
+  }
+}
 /*.theme-dark .page {}*/
 
 :root.theme-dark {
