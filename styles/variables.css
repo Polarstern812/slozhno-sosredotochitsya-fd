@@ -7,15 +7,15 @@
   /* дефолтные значения для переменных */
 
   :root {
-  --background-image-theme-dark: url("../images/cover-image-dark.png"); 
-  --dark-color: #000028; /*фоновый цвет, который совпадает с основным тоном фонового изображения страницы*/
-  --dark-theme-color: #F1B2CE;
-  --dark-theme-title-color: #DB00FF;
-  --dark-theme-accent-color: #FF0070;
-  --dark-theme-hover-effect-color: #FF007066;
+  --background-image: url("../images/cover-image-dark.png"); 
+  --background-color: #000028; /*фоновый цвет, который совпадает с основным тоном фонового изображения страницы*/
+  --main-font-color: #F1B2CE;
+  --main-title-color: #DB00FF;
+  --accent-color: #FF0070;
+  --decorated-zone-color: #FF0070;
 
-
-
+  --shadow-effect-color: #FF0070;
+  --hover-button-effect-color: #FF007066;
 
   --font-family: "IBM Plex Mono", monospace;
   --font-size: 18px;
@@ -24,5 +24,22 @@
   --font-weight-regular: 400;
   --font-weight-bold: 700;
   --letter-spacing: 0%;
-
   }
+
+
+  /* :root {
+  --background-image-theme-dark: url("../images/cover-image-dark.png"); 
+  --dark-color: #000028; 
+  --dark-theme-color: #F1B2CE;
+  --dark-theme-title-color: #DB00FF;
+  --dark-theme-accent-color: #FF0070;
+  --dark-theme-hover-effect-color: #FF007066;
+
+  --font-family: "IBM Plex Mono", monospace;
+  --font-size: 18px;
+  --title-clamp-large: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --title-clamp-small: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --letter-spacing: 0%;
+  }*/
