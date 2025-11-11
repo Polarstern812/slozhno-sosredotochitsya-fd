@@ -33,6 +33,9 @@
 
   --shadow-effect-color: #FF8DCB;
   --hover-button-effect-color: #32312D66;
+  --section-font-color: #353430;
+  --border-color: #353430;
+  --shadow-link-color: #FF8DCB;
   }
   }
 
@@ -44,7 +47,11 @@
   --accent-color: #FF8DCB;
   --decorated-zone-color: #353430;
 
+  --shadow-effect-color: #FF8DCB;
   --hover-button-effect-color: #32312D66;
+  --section-font-color: #353430;
+  --border-color: #353430;
+  --shadow-link-color: #FF8DCB;
   
   .decor-elements__REC {
   display: none;

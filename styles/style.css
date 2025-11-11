@@ -213,13 +213,13 @@ padding-block-start: 40px;
 padding-block-end: 30px; /*50*/
 }
 
-.section__title {
+/*.section__title {
 font-size: var(--font-size, 18px); 
 font-weight: var(--font-weight-bold, 700);
 line-height: 23.4px;
 color: var(--accent-color, #FF0070);
 padding-block-end: 20px;
-}
+}*/
 
 /*.section__title:not(:last-child) { padding-block-end: 10px; }
 /*.section__title:last-child { padding-block-end: 10px; }*/
@@ -231,19 +231,28 @@ padding-block-end: 20px;
 .food,
 .gadgets {}*/
 
-.article-title {
-/*min-block-size: 23px;
-min-inline-size: 355px;*/
+/*.article-title {
 font-size: var(--font-size, 18px); 
 font-weight: var(--font-weight-bold, 700);
 line-height: 23.4px;
-}
+}*/
 
 /*.section-article__title-main-style {
 font-size: var(--font-size, 18px); 
 font-weight: var(--font-weight-bold, 700);
 line-height: 23.4px;
 } */
+
+.section__article-features {
+font-size: var(--font-size, 18px); 
+line-height: 23.4px;
+font-weight: var(--font-weight-bold, 700);
+}
+
+.section__more-features {
+color: var(--section-font-color, #FF0070);
+padding-block-end: 20px;
+}
 
 .main-text {
 font-weight: var(--font-weight-regular, 400);
@@ -260,13 +269,13 @@ text-decoration: none;
 
 .text-link-decor {
 /*box-shadow: [horizontal offset] [vertical offset] [blur radius] [color];*/
-text-shadow: 2px 1px 0px var(--accent-color, #FF0070);
+text-shadow: 2px 1px 0px var(--shadow-link-color);
 border-bottom: none;
 }
 
 /*при наведении курсора на элемент - появляется одно нижнее подчеркивание в цвет текста*/
 .section__article-text-link:hover {
-border-bottom:  1px solid var(--dark-theme-color, #F1B2CE);
+border-bottom:  1px solid var(--border-color, #F1B2CE);
 /*padding-bottom: 1px;*/
 box-shadow: none;
 }
@@ -483,10 +492,6 @@ padding-block-end: 60px; /*80*/
 
 .title__what-reduces-concentration-of-attention {
 inline-size: 236px;
-/*block-size: 70px; Текстовым элементам не ограничиваем высоту.*/
-/*margin-block-end: 20px;*/
-/*justify-content: start;*/
-/*display: block;*/
 }
 
 /*
@@ -748,9 +753,6 @@ column-gap: 20px;
 
 .title__what-reduces-concentration-of-attention {
 inline-size: 315px;
-/*block-size: 47px;*/
-/*grid-column: 1 / -3;
-grid-row: 1 / 2;*/
 }
 /*.section-what-reduces-concentration-of-attention__multitasking {
 grid-area: section-what-reduces-concentration-of-attention__multitasking;
