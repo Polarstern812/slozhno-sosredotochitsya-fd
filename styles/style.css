@@ -226,7 +226,7 @@ padding-block-end: 20px;
 
 /*
 .multitasking-why-it-is-so-hard-to-concentrate,
-.dofamin,
+.dofamin-why-it-is-so-hard-to-concentrate,
 .multitasking-two,
 .food,
 .gadgets {}*/
@@ -455,33 +455,46 @@ padding-block-end: 60px; /*!!!*/
 .main__section__why-it-is-so-hard-to-concentrate {
 padding-block-start: 60px;
 padding-block-end: 60px; /*80*/
+
 display: grid;
-grid-template-rows: 1fr 1fr;
-/*grid-template-columns: 35,16% 64,84%;*/
-/*grid-template-columns: min-content 1fr;*/
+grid-template-rows: 1fr; /*1fr 1fr*/
 grid-template-columns: 35% 65%;
-/*column-gap: 20px;*/
-grid-template-areas: "title__why-it-is-so-hard-to-concentrate section-why-it-is-so-hard-to-concentrate__multitasking"
+/*grid-template-areas: "title__why-it-is-so-hard-to-concentrate section-why-it-is-so-hard-to-concentrate__multitasking"
 "title__why-it-is-so-hard-to-concentrate section-why-it-is-so-hard-to-concentrate__dofamin";
-/*row-gap: 20px;*/
+*/
 }
 
 .title__why-it-is-so-hard-to-concentrate {
-grid-area: title__why-it-is-so-hard-to-concentrate;
-padding-inline-end: 20px;
+grid-column: 1 / 2;
+grid-row: 1 / 2;
+inline-size: 236px;
+/*grid-area: title__why-it-is-so-hard-to-concentrate;
+padding-inline-end: 20px;*/
 }
 
-.section-why-it-is-so-hard-to-concentrate__multitasking {
-grid-area: section-why-it-is-so-hard-to-concentrate__multitasking;
-/*padding-block-end: 20px;*/
+.section-why-it-is-so-hard-to-concentrate__items {
+grid-column: 2 / 3;
+grid-row: 2 / -2;
 }
 
-/*.multitasking-why-it-is-so-hard-to-concentrate, .dofamin {}*/
-
-.section-why-it-is-so-hard-to-concentrate__dofamin {
-grid-area: section-why-it-is-so-hard-to-concentrate__dofamin;
-/*padding-block-end: 50px;*/
+.section__why-it-is-so-hard-to-concentrate {
+display: flex;
+flex-direction: column;
 }
+
+/*.section-why-it-is-so-hard-to-concentrate__multitasking {
+grid-area: section-why-it-is-so-hard-to-concentrate__multitasking; }
+*/
+
+
+/*.multitasking-why-it-is-so-hard-to-concentrate, .dofamin-why-it-is-so-hard-to-concentrate {}*/
+
+/*.section-why-it-is-so-hard-to-concentrate__dofamin {
+/*grid-area: section-why-it-is-so-hard-to-concentrate__dofamin; }
+*/
+
+
+
 
 .main__section__what-reduces-concentration-of-attention {
 /*min-block-size: 675px; высоту лучше не фиксировать*/
@@ -735,6 +748,9 @@ min-inline-size: 1024px;
 grid-template-columns: 34% 66%;
 }
 
+.title__why-it-is-so-hard-to-concentrate {
+inline-size: 315px;
+}
 .main__section__what-reduces-concentration-of-attention {
 /*min-block-size: 498px;*/
 min-inline-size: 984px;
