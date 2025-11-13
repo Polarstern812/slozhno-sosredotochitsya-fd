@@ -18,6 +18,11 @@
   --border-color: #F1B2CE;
   --shadow-link-color: #FF0070;
   }
+
+  .theme-light .decor-elements__REC {
+  display: none;
+  }
+  
 }
 /*.theme-dark .page {}*/
 

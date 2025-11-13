@@ -17,6 +17,7 @@
   --decorated-zone-color: #353430;
 
   --hover-button-effect-color: #32312D66;
+  
 }
 
 
@@ -37,6 +38,14 @@
   --border-color: #353430;
   --shadow-link-color: #FF8DCB;
   }
+
+  .decor-elements__REC {
+  display: none;
+  }
+
+  .theme-dark .decor-elements__REC{
+  display: flex;
+  }
   }
 
 .theme-light .page {
@@ -52,10 +61,7 @@
   --section-font-color: #353430;
   --border-color: #353430;
   --shadow-link-color: #FF8DCB;
-  
-  .decor-elements__REC {
-  display: none;
-  }
+
   }
   
 
