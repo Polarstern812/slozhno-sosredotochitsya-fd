@@ -191,7 +191,7 @@ margin-block-end: 36px; /*56*/
 .accent-marker-text { /*title-decor*/
 line-height: 23.4px;
 font-weight: var(--font-weight-bold, 700);
-color: var(--dark-color, #000028);
+color: var(--up-h2-title-color, #000028);
 background-color: var(--accent-color, #FF0070);
 }
 
@@ -486,15 +486,11 @@ flex-direction: column;
 grid-area: section-why-it-is-so-hard-to-concentrate__multitasking; }
 */
 
-
 /*.multitasking-why-it-is-so-hard-to-concentrate, .dofamin-why-it-is-so-hard-to-concentrate {}*/
 
 /*.section-why-it-is-so-hard-to-concentrate__dofamin {
 /*grid-area: section-why-it-is-so-hard-to-concentrate__dofamin; }
 */
-
-
-
 
 .main__section__what-reduces-concentration-of-attention {
 /*min-block-size: 675px; высоту лучше не фиксировать*/
@@ -567,7 +563,6 @@ grid-template-columns: 1fr;
 /*display: flex;
 flex-direction: column;*/
 gap: 20px;
-/*display: block;*/
 /*padding-inline-end: 60px;*/
 }
 
@@ -644,13 +639,13 @@ block-size: 100%;
 
 
 .footer {
-height: 100vh; /* 100% от высоты окна браузера */ 
+/*height: 100vh; /* 100% от высоты окна браузера */ 
 min-block-size: 1024px; 
 /*margin-top: 60px;*/
 /*min-block-size: 1024px; /*фиксируем минимальную высоту блока согласно значению из макета*/
 grid-template-rows: 1fr 1fr 1fr;
-align-items: center;
-justify-content: center;
+/*align-items: center;
+justify-content: center;*/
 padding: 20px;
 }
 
@@ -713,11 +708,7 @@ flex-direction: row;
 font-size: var(--title-clamp-large);
 grid-row: 2 / 4;
 grid-column: 1 / -1;
-/*justify-self: start;*/
-/*align-self: center;*/
-/*margin-block-start: 0px;*/
 margin-block-start: 45px;
-/* margin-inline-start: -20px; */
 }
 
 .header__subtitle {
@@ -751,15 +742,14 @@ grid-template-columns: 34% 66%;
 .title__why-it-is-so-hard-to-concentrate {
 inline-size: 315px;
 }
+
 .main__section__what-reduces-concentration-of-attention {
 /*min-block-size: 498px;*/
 min-inline-size: 984px;
 /*display: grid;
 grid-template-columns: 32% 32% 32%;
 /*grid-template-columns: repeat(3, 32%);*/
-/*grid-template-columns: repeat(3, 33%);*/
 /*grid-template-rows: 13% 87%;*/
-/*grid-template-rows: min-content 1fr;*/
 /*grid-auto-flow: row;*/
 column-gap: 20px;
 
@@ -847,9 +837,9 @@ min-block-size: 768px;
 min-inline-size: 1024px; 
 }
 
-.footer-title {
+/*.footer-title {
 /*align-items: center;
-justify-content: center;*/
+justify-content: center; }*/
 }
-}
+
  

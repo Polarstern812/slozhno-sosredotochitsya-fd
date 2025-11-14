@@ -17,6 +17,7 @@
   --section-font-color: #FF0070;
   --border-color: #F1B2CE;
   --shadow-link-color: #FF0070;
+  --up-h2-title-color: #000028;
   }
 
   .theme-light .decor-elements__REC {
@@ -43,7 +44,8 @@
   --hover-button-effect-color: #FF007066;
   --section-font-color: #FF0070;
   --border-color: #F1B2CE;
-  --shadow-link-color: #FF0070
+  --shadow-link-color: #FF0070;
+  --up-h2-title-color: #000028;
   }
 
 

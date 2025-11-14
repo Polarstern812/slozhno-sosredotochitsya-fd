@@ -16,8 +16,12 @@
   --accent-color: #FF8DCB;
   --decorated-zone-color: #353430;
 
+  --shadow-effect-color: #FF8DCB;
   --hover-button-effect-color: #32312D66;
-  
+  --section-font-color: #353430;
+  --border-color: #353430;
+  --shadow-link-color: #FF8DCB;
+  --up-h2-title-color: #353430;
 }
 
 
@@ -37,6 +41,7 @@
   --section-font-color: #353430;
   --border-color: #353430;
   --shadow-link-color: #FF8DCB;
+  --up-h2-title-color: #353430;
   }
 
   .decor-elements__REC {
@@ -61,7 +66,7 @@
   --section-font-color: #353430;
   --border-color: #353430;
   --shadow-link-color: #FF8DCB;
-
+  --up-h2-title-color: #353430;
   }
   
 
